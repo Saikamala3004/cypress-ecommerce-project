@@ -3,6 +3,7 @@ describe('SauceDemo Checkout Flow', () => {
 beforeEach(() => {
   cy.visit('https://www.saucedemo.com/')
   cy.login('standard_user', 'secret_sauce')
+  
 })
 
   it('User should complete checkout successfully', () => {
@@ -15,6 +16,7 @@ beforeEach(() => {
 
       // Go to cart
       cy.get('.shopping_cart_link').click()
+      cy.screenshot('cart-page')
 
       // Checkout
       cy.get('[data-test="checkout"]').click()
@@ -31,6 +33,7 @@ beforeEach(() => {
 
       // Validate success
       cy.contains('Thank you for your order!').should('be.visible')
+      cy.screenshot('order-success')
 
     })
 
