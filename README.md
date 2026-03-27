@@ -37,7 +37,11 @@ This project demonstrates end-to-end automation testing of an e-commerce web app
 
 ## Test Execution Screenshots
 
-(Add screenshots here from docs folder)
+### Cart Page
+![Cart](docs/cart-page.png)
+
+### Order Success
+![Order](docs/order-success.png)
 
 ## How to Run
 
