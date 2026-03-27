@@ -1,13 +1,9 @@
 describe('SauceDemo Checkout Flow', () => {
 
-  beforeEach(() => {
-    cy.visit('https://www.saucedemo.com/')
-
-    // Login
-    cy.get('#user-name').type('standard_user')
-    cy.get('#password').type('secret_sauce')
-    cy.get('#login-button').click()
-  })
+beforeEach(() => {
+  cy.visit('https://www.saucedemo.com/')
+  cy.login('standard_user', 'secret_sauce')
+})
 
   it('User should complete checkout successfully', () => {
 
